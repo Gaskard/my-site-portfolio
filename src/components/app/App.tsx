@@ -1,11 +1,18 @@
 import "normalize.css";
-import '../../styles/base.scss'
+import '../../styles/reset.scss';
+import '../../styles/base.scss';
+
+import Header from "../header/Header.tsx";
+import HelloPart from "../helloPart/HelloPart.tsx";
 
 function App() {
 
   return (
-      <header/>
+      <>
+          <Header/>
+          <HelloPart/>
+      </>
   )
 }
 
-export default App
+export default App;
