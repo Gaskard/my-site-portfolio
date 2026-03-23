@@ -1,0 +1,26 @@
+.tech {
+  &__title {
+    margin-top: 350px;
+
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54%;
+    text-align: center;
+    color: #42446E;
+
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 81%;
+    text-align: center;
+    color: #666666;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 80px;
+    justify-items: center;
+    margin-top: 140px;
+  }
+}

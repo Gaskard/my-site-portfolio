@@ -4,6 +4,7 @@ import '../../styles/base.scss';
 
 import Header from "../header/Header.tsx";
 import HelloPart from "../helloPart/HelloPart.tsx";
+import TechStackPart from "../techStackPart/TechStackPart.tsx";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <>
           <Header/>
           <HelloPart/>
+          <TechStackPart/>
       </>
   )
 }
