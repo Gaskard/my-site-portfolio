@@ -1,0 +1,17 @@
+.portfolio {
+  margin-top: 140px;
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54%;
+    text-align: center;
+    color: #42446E;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 81%;
+    text-align: center;
+    color: #666666;
+  }
+}

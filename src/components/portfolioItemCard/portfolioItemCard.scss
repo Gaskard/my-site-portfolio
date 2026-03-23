@@ -1,0 +1,42 @@
+
+
+.card {
+  width: 375px;
+  height: 567px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
+  &__descr {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 144%;
+    color: #666666;
+  }
+  &__content {
+    padding: 30px;
+  }
+  &__header {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 93%;
+    margin: 0;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 163%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #000;
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+}
