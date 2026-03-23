@@ -5,26 +5,15 @@ import github from '../header/icons/github.svg'
 import linkedin from '../header/icons/linkedin.svg'
 import twitter from '../header/icons/twitter.svg'
 
+import NavBar from "../navBar/NavBar.tsx";
+
 const Header = () => {
 	return (
 		<div className="container">
 			<header className="header">
 				<img src={logo} alt="logo" className="header__logo"/>
 				<div className="header__menu">
-					<nav className="header__navbar">
-						<ul className="header__list">
-							<li className="header__item">
-								<a href="" className="header__link">Home</a></li>
-							<li className="header__item">
-								<a href="" className="header__link">About</a></li>
-							<li className="header__item">
-								<a href="" className="header__link">Tech Stack</a></li>
-							<li className="header__item">
-								<a href="" className="header__link">Projects</a></li>
-							<li className="header__item">
-								<a href="" className="header__link">Contact</a></li>
-						</ul>
-					</nav>
+					<NavBar/>
 						<ul className="social">
 							<li className="social__item">
 								<a href="" className="social__link">

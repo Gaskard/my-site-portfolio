@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 225px;
+  margin-bottom: 60px;
+  &__logo {
+    width: 60px;
+    height: 60px;
+  }
+  &__social {
+    display : flex;
+    justify-content: end;
+    gap: 100px;
+    align-items: flex-end;
+  }
+  &__links {
+    display: flex;
+    gap: 20px;
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+  &__mail {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &__email {
+    text-decoration: none;
+    color: #42446E;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.navbar__footer {
+  margin-top: 60px;
+}

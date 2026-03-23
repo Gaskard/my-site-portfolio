@@ -1,0 +1,14 @@
+.navbar {
+  &__list {
+    display: flex;
+    gap: 54px;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 144%;
+    text-align: center;
+    text-decoration: none;
+    color: #666666;
+  }
+}

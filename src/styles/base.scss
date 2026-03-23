@@ -6,3 +6,11 @@
   max-width: 1215px;
   margin: 40px auto;
 }
+
+.divider {
+  width: 100%;
+  height: 2px;
+  stroke-width: 2px;
+  stroke: var(--dark-content);
+  background-color: #666666;
+}
