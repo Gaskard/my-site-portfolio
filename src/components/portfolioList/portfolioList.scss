@@ -14,4 +14,10 @@
     text-align: center;
     color: #666666;
   }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 90px;
+    row-gap: 62px;
+  }
 }

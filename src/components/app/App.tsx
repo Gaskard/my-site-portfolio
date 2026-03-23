@@ -6,7 +6,6 @@ import Header from "../header/Header.tsx";
 import HelloPart from "../helloPart/HelloPart.tsx";
 import TechStackPart from "../techStackPart/TechStackPart.tsx";
 import PortfolioList from "../portfolioList/PortfolioList.tsx";
-import PortfolioItemCard from "../portfolioItemCard/PortfolioItemCard.tsx";
 
 function App() {
 
@@ -16,7 +15,6 @@ function App() {
         <HelloPart/>
         <TechStackPart/>
         <PortfolioList/>
-        <PortfolioItemCard/>
       </>
   )
 }

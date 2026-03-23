@@ -3,23 +3,33 @@ import './portfolioItemCard.scss'
 import link from './icons/link.svg'
 import github from './icons/github.svg'
 
-import photo from './img/Rectangle 4.jpg'
 
-const PortfolioItemCard = () => {
+  interface ProjectCardProps {
+  key: number,
+  title: string,
+  description: string,
+  liveUrl: string,
+  codeUrl: string,
+  stack: string,
+  img: string,
+}
+
+const PortfolioItemCard = ({img, title, description, stack, liveUrl, codeUrl} : ProjectCardProps) => {
   return (
     <li className="card">
-      <img src={photo} alt="project image" className="portfolio__photo"/>
+      <img src={img} alt="project image" className="portfolio__photo"/>
       <div className="card__content">
-        <h2 className="card__header">Project Tile goes here</h2>
-      <p className="card__descr">This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content</p>
+        <h2 className="card__header">{title}</h2>
+        <p className="card__descr">{description}</p>
+        <p className="card__stack">Tech stack : {stack}</p>
       <div className="card__links">
         <div className="card__link-wrapper">
           <img src={link} alt="live link" className="card__icon"/>
-          <a href="" className="card__link">Live Preview</a>
+          <a href={liveUrl} className="card__link">Live Preview</a>
         </div>
         <div className="card__link-wrapper">
           <img src={github} alt="github" className="card__icon"/>
-          <a href="" className="card__link">View Code</a>
+          <a href={codeUrl} className="card__link">View Code</a>
         </div>
       </div>
       </div>
