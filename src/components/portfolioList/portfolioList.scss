@@ -15,9 +15,20 @@
     color: #666666;
   }
   &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 90px;
-    row-gap: 62px;
+    overflow: hidden;
+    cursor: grab;
+    padding: 40px 0;
+    width: 100%;
+  }
+  &__drag {
+    &-inner {
+      display: flex;
+      width: max-content;
+    }
+    &-wrapper {
+      flex-shrink: 0;
+      width: 400px;
+      margin: 0 20px;
+    }
   }
 }

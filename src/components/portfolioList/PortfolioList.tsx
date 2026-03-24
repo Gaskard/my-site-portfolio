@@ -1,7 +1,9 @@
 import './portfolioList.scss'
 import photo from "./img/Rectangle 4.jpg";
 
-import PortfolioItemCard from "../portfolioItemCard/PortfolioItemCard.tsx";
+import PortfolioItemCard from "../portfolioItemCard/PortfolioItemCard";
+
+import { motion } from "framer-motion";
 
 
 const PortfolioList = () => {
@@ -74,13 +76,20 @@ const PortfolioList = () => {
   ]
 
   return (
-    <div className="container">
       <section id='projects' className="portfolio">
-        <h1 className="portfolio__title">Projects</h1>
-        <p className="portfolio__subtitle">Things I’ve built so far</p>
-        <ul className="portfolio__list">
-          {projectsData.map(project => (
-            <PortfolioItemCard
+        <div className="container">
+          <h1 className="portfolio__title">Projects</h1>
+          <p className="portfolio__subtitle">Things I’ve built so far</p>
+        </div>
+        <div className="portfolio__list">
+            <motion.div
+              drag='x'
+              dragConstraints={{right: 0, left: -1500}}
+              className="portfolio__drag-inner"
+              whileTap={{ cursor: "grabbing" }}>
+              {projectsData.map(project => (
+            <div className="portfolio__drag-wrapper">
+              <PortfolioItemCard
               key={project.id}
               img={project.img}
               title={project.title}
@@ -89,10 +98,11 @@ const PortfolioList = () => {
               liveUrl={project.liveUrl}
               codeUrl={project.codeUrl}
             />
+            </div>
           ))}
-        </ul>
+            </motion.div>
+        </div>
       </section>
-    </div>
   )
 }
 

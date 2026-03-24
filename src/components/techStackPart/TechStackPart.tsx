@@ -9,8 +9,36 @@ import reactIcon from './icons/react.svg'
 import bootstrapIcon from './icons/bootstrap.svg'
 import sassIcon from './icons/sass.svg'
 
+import {motion, type Variants} from "framer-motion";
+
 const TechStackPart = () => {
 
+  //animation
+
+  const containerVariants: Variants = {
+    hidden: {opacity: 0},
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      }
+    }
+  }
+
+  const itemVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 30
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {duration: 0.5, ease: 'easeOut'}
+    }
+  }
+
+
+  //function
   interface TechItem {
     name: string;
     icon: string;
@@ -32,13 +60,18 @@ const TechStackPart = () => {
       <section id='techStack' className="tech">
         <h2 className="tech__title">My Tech Stack</h2>
         <p className="tech__subtitle"> Technologies I’ve been working with recently</p>
-        <ul className="tech__list">
+        <motion.ul
+          className="tech__list"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView='visible'
+          viewport={{once: true, amount: 0.2}}>
           {techStack.map((tech, index) => (
-            <li key={index} className="tech__item">
+            <motion.li key={index} className="tech__item" variants={itemVariants} whileHover={{scale: 1.15, y: -5}}>
               <img src={tech.icon} alt={tech.name} className="tech__icon"/>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </section>
     </div>
   )

@@ -5,7 +5,6 @@ import github from './icons/github.svg'
 
 
   interface ProjectCardProps {
-  key: number,
   title: string,
   description: string,
   liveUrl: string,
@@ -16,8 +15,8 @@ import github from './icons/github.svg'
 
 const PortfolioItemCard = ({img, title, description, stack, liveUrl, codeUrl} : ProjectCardProps) => {
   return (
-    <li className="card">
-      <img src={img} alt="project image" className="portfolio__photo"/>
+    <div className="card">
+      <img src={img} alt="project image" className="card__photo"/>
       <div className="card__content">
         <h2 className="card__header">{title}</h2>
         <p className="card__descr">{description}</p>
@@ -33,7 +32,7 @@ const PortfolioItemCard = ({img, title, description, stack, liveUrl, codeUrl} : 
         </div>
       </div>
       </div>
-    </li>
+    </div>
   )
 }
 
