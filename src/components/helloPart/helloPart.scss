@@ -23,11 +23,10 @@
     background: linear-gradient(45deg, #ff7e5f, #feb47b);
     padding: 9px;
   }
-}
-
-.nickname {
-  background: linear-gradient(45deg, #ff7e5f, #feb47b);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  &__nickname {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }

@@ -1,13 +1,30 @@
 import './helloPart.scss'
 
+import Typewriter from 'typewriter-effect'
+
 import myPhoto from '../helloPart/img/myPhoto.jpg'
 
 const HelloPart = () => {
 	return (
 		<div className="container">
-			<div className="hello">
+			<div id='about' className="hello">
 				<h1 className="hello__title">
-					Frontend Developer<br/> <span className='nickname'>Seqvail</span> <br/>| React, TypeScript, Next.js
+					<Typewriter
+						onInit={(typewriter) => {
+							typewriter
+								.typeString('Frontend Developer <br/>')
+								.pauseFor(500)
+								.typeString('<span class="hello__nickname">Seqvail<span/><br/>')
+								.typeString('| React, TypeScript, Next.js')
+								.start()
+						}}
+						options={{
+							autoStart: true,
+							loop: false,
+							delay: 50,
+							cursor: '|'
+						}}
+					/>
 				</h1>
 				<div className="hello__border">
 					<img src={myPhoto} alt="myPhoto" className="hello__photo"/>

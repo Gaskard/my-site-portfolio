@@ -16,4 +16,12 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  &__item {
+    display: inline-block;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: rotate(10deg) scale(1.1);
+    }
+  }
 }

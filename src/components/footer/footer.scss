@@ -34,6 +34,14 @@
     display: flex;
     justify-content: end;
   }
+  &__item {
+    display: inline-block;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: rotate(10deg) scale(1.1);
+    }
+  }
 }
 
 .navbar__footer {

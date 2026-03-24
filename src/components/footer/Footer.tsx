@@ -12,7 +12,7 @@ import NavBar from "../navBar/NavBar.tsx";
 const Footer = () => {
   return (
     <div className="container">
-      <footer className="footer">
+      <footer id='contacts' className="footer">
         <img src={logo} alt="logo" className="footer__logo"/>
         <div className="footer__social">
           <div className="footer__mail">
@@ -20,12 +20,21 @@ const Footer = () => {
             <a href="mailto:dimacr137@gmail.com" className="footer__email">dimacr137@gmail.com</a>
           </div>
           <ul className="footer__links">
-            <li className="footer__link">
-              <img src={github} alt="github" className="footer__icon"/></li>
-            <li className="footer__link">
-              <img src={twitter} alt="twitter" className="footer__icon"/></li>
-            <li className="footer__link">
-              <img src={linkedin} alt="linkedin" className="footer__icon"/></li>
+            <li className="footer__item">
+              <a href="" className="footer__link">
+                <img src={github} alt="github" className="footer__icon"/>
+              </a>
+            </li>
+            <li className="footer__item">
+              <a href="" className="footer__link">
+                <img src={twitter} alt="twitter" className="footer__icon"/>
+              </a>
+            </li>
+            <li className="footer__item">
+              <a href="" className="footer__link">
+                <img src={linkedin} alt="linkedin" className="footer__icon"/>
+              </a>
+            </li>
           </ul>
         </div>
       </footer>

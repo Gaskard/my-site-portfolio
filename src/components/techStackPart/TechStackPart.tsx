@@ -29,7 +29,7 @@ const TechStackPart = () => {
 
   return (
     <div className="container">
-      <section className="tech">
+      <section id='techStack' className="tech">
         <h2 className="tech__title">My Tech Stack</h2>
         <p className="tech__subtitle"> Technologies I’ve been working with recently</p>
         <ul className="tech__list">

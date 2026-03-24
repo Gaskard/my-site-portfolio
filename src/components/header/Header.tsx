@@ -10,7 +10,7 @@ import NavBar from "../navBar/NavBar.tsx";
 const Header = () => {
 	return (
 		<div className="container">
-			<header className="header">
+			<header id='home' className="header">
 				<img src={logo} alt="logo" className="header__logo"/>
 				<div className="header__menu">
 					<NavBar/>
